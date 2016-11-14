@@ -104,8 +104,10 @@
 		94DE40731DD755FE0081B979 /* Weatherly */ = {
 			isa = PBXGroup;
 			children = (
+				94DE40C21DDA65BC0081B979 /* Model */,
+				94DE40C11DDA65B70081B979 /* View */,
+				94DE40C01DDA65AD0081B979 /* Controller */,
 				94DE40741DD755FE0081B979 /* AppDelegate.swift */,
-				94DE40761DD755FE0081B979 /* WeatherViewController.swift */,
 				94DE40781DD755FE0081B979 /* Main.storyboard */,
 				94DE407B1DD755FE0081B979 /* Assets.xcassets */,
 				94DE407D1DD755FE0081B979 /* LaunchScreen.storyboard */,
@@ -130,6 +132,28 @@
 				94DE40961DD755FF0081B979 /* Info.plist */,
 			);
 			path = WeatherlyUITests;
+			sourceTree = "<group>";
+		};
+		94DE40C01DDA65AD0081B979 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94DE40761DD755FE0081B979 /* WeatherViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		94DE40C11DDA65B70081B979 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		94DE40C21DDA65BC0081B979 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9DE8A4E3AFAA83B9623C07FC /* Pods */ = {
