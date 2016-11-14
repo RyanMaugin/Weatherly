@@ -16,6 +16,7 @@
 		94DE408A1DD755FF0081B979 /* WeatherlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE40891DD755FF0081B979 /* WeatherlyTests.swift */; };
 		94DE40951DD755FF0081B979 /* WeatherlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE40941DD755FF0081B979 /* WeatherlyUITests.swift */; };
 		94DE40C41DDA66010081B979 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE40C31DDA66010081B979 /* Constants.swift */; };
+		94DE40C61DDA69500081B979 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE40C51DDA69500081B979 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		94DE40941DD755FF0081B979 /* WeatherlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherlyUITests.swift; sourceTree = "<group>"; };
 		94DE40961DD755FF0081B979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DE40C31DDA66010081B979 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		94DE40C51DDA69500081B979 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		A0484B77E38F7A898C7847E0 /* Pods-Weatherly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weatherly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weatherly/Pods-Weatherly.debug.xcconfig"; sourceTree = "<group>"; };
 		C2EF2300D224E0752846AA05 /* Pods_Weatherly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weatherly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 		94DE40C21DDA65BC0081B979 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94DE40C51DDA69500081B979 /* CurrentWeather.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			files = (
 				94DE40771DD755FE0081B979 /* WeatherViewController.swift in Sources */,
 				94DE40751DD755FE0081B979 /* AppDelegate.swift in Sources */,
+				94DE40C61DDA69500081B979 /* CurrentWeather.swift in Sources */,
 				94DE40C41DDA66010081B979 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
