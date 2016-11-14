@@ -70,11 +70,37 @@ class CurrentWeather {
         // Make the http request
         Alamofire.request(currentWeatherURL).responseJSON { response in
             let result = response.result
-            print(result)
+            
+            // Getting the data and saving them into the variables
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let name = dict["name"] as? String {
+                    self._cityName = name.capitalized
+                    print(self._cityName)
+                }
+                
+                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
+                    if let main = weather[0]["main"] as? String {
+                        self._weatherType = main.capitalized
+                        print(self._weatherType)
+                    }
+                }
+                
+                if let main = dict["main"] as? Dictionary<String, AnyObject> {
+                    if let current = main["temp"] as? Double {
+                        // Returns temperature in kelvin format so conversion to Celsius is needed
+                        let kelvinToCelsius = current - 273.5
+                        self._currentTemp = kelvinToCelsius
+                        print(Int(self._currentTemp))
+                    }
+                }
+                
+            }
         }
         
         // Tell the request that it is done
         completed()
+        
     }
     
 }
