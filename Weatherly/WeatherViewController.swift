@@ -8,12 +8,70 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    // Outlets
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var currentTempLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var currentWeatherImage: UIImageView!
+    @IBOutlet weak var CurrentWeatherTypeLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Set tableView delegate and data source
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+    
+    
+    // MARK:- Table View Protocols
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // Return the number of colums to be displayed in tableView
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // This will return the amount of rows to be dis[;ayed in tableVoew
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // This creates the cell and then returns it
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath)
+        return cell
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

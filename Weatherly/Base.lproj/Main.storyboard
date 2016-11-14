@@ -62,9 +62,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="leading" secondItem="EUz-LH-lUN" secondAttribute="trailing" constant="20" id="5is-nZ-jpx"/>
+                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="leading" secondItem="EUz-LH-lUN" secondAttribute="trailing" constant="5" id="5is-nZ-jpx"/>
                                     <constraint firstItem="qMY-Ed-BhO" firstAttribute="leading" secondItem="DeY-FK-fdF" secondAttribute="leading" id="8ge-Ez-UdR"/>
-                                    <constraint firstAttribute="trailing" secondItem="2eW-5v-kqR" secondAttribute="trailing" constant="15" id="Ava-aZ-guo"/>
+                                    <constraint firstAttribute="trailing" secondItem="2eW-5v-kqR" secondAttribute="trailing" constant="22" id="Ava-aZ-guo"/>
                                     <constraint firstAttribute="bottom" secondItem="EUz-LH-lUN" secondAttribute="bottom" constant="20" id="FOi-HG-T0x"/>
                                     <constraint firstAttribute="height" constant="300" id="JVJ-vR-fDl"/>
                                     <constraint firstItem="qMY-Ed-BhO" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" id="NYu-6b-T2a"/>
@@ -79,7 +79,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OdF-rg-Kco">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="VXU-Ww-77l">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="VXU-Ww-77l">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VXU-Ww-77l" id="GoV-Mj-wjL">
@@ -135,8 +135,13 @@
                                                 <constraint firstItem="mDz-b5-uLI" firstAttribute="top" secondItem="GoV-Mj-wjL" secondAttribute="topMargin" constant="7" id="rON-n5-rXr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="T8J-WU-da1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Izg-44-fCo"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,6 +155,14 @@
                             <constraint firstItem="DeY-FK-fdF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o5y-DS-J3x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CurrentWeatherTypeLabel" destination="Goq-La-zP9" id="gl8-Mq-32U"/>
+                        <outlet property="currentTempLabel" destination="HjF-Qd-amY" id="20t-I4-mYV"/>
+                        <outlet property="currentWeatherImage" destination="LgM-L9-fWJ" id="ACe-dx-8Ju"/>
+                        <outlet property="dateLabel" destination="9Me-oP-8Vx" id="L8r-mx-fsw"/>
+                        <outlet property="locationLabel" destination="zE2-Jj-Ugn" id="3CG-nm-wQc"/>
+                        <outlet property="tableView" destination="OdF-rg-Kco" id="H3E-Ua-kVU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
