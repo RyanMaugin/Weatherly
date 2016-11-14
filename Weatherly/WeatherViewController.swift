@@ -48,6 +48,21 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        // This will create buttons for when the cell is swiped and reveals them to be pressed
+        
+        let info = UITableViewRowAction(style: .normal, title: "  Info  ", handler: { action, index in
+            print("Info was pressed!")
+        })
+        info.backgroundColor = UIColor.red
+        
+        return [info]
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // This needs to be called in order to commit styles and allow swipeable cells
+    }
+    
 }
 
 
