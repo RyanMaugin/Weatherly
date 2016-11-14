@@ -11,13 +11,16 @@ import UIKit
 class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    // Outlets
+    //// Outlets
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var currentWeatherImage: UIImageView!
     @IBOutlet weak var CurrentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    //// Variables
+    let currentWeather = CurrentWeather()
     
 
     override func viewDidLoad() {
@@ -27,7 +30,9 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        print(CURRENT_WEATHER_URL)
+        currentWeather.downloadWeatherDetails {
+            // TODO: Update UI to display data
+        }
     }
     
     

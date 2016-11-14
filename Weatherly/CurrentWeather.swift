@@ -59,4 +59,29 @@ class CurrentWeather {
         return _currentTemp
     }
     
+    
+    //// Class Functions
+    
+    func downloadWeatherDetails(completed: DownloadComplete) {
+        
+        // Alamofire download
+        let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
+        
+        // Make the http request
+        Alamofire.request(currentWeatherURL).responseJSON { response in
+            let result = response.result
+            print(result)
+        }
+        
+        // Tell the request that it is done
+        completed()
+    }
+    
 }
+
+
+
+
+
+
+
