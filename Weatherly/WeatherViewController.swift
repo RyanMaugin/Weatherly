@@ -26,6 +26,8 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Set tableView delegate and data source
         tableView.delegate = self
         tableView.dataSource = self
+        
+        print(CURRENT_WEATHER_URL)
     }
     
     
