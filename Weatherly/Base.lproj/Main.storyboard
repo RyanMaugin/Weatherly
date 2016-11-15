@@ -62,18 +62,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="leading" secondItem="EUz-LH-lUN" secondAttribute="trailing" constant="5" id="5is-nZ-jpx"/>
+                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="leading" secondItem="EUz-LH-lUN" secondAttribute="trailing" id="5is-nZ-jpx"/>
                                     <constraint firstItem="qMY-Ed-BhO" firstAttribute="leading" secondItem="DeY-FK-fdF" secondAttribute="leading" id="8ge-Ez-UdR"/>
                                     <constraint firstAttribute="trailing" secondItem="2eW-5v-kqR" secondAttribute="trailing" constant="22" id="Ava-aZ-guo"/>
                                     <constraint firstAttribute="bottom" secondItem="EUz-LH-lUN" secondAttribute="bottom" constant="20" id="FOi-HG-T0x"/>
                                     <constraint firstAttribute="height" constant="300" id="JVJ-vR-fDl"/>
                                     <constraint firstItem="qMY-Ed-BhO" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" id="NYu-6b-T2a"/>
                                     <constraint firstAttribute="bottom" secondItem="qMY-Ed-BhO" secondAttribute="bottom" id="OKt-rO-Xui"/>
-                                    <constraint firstAttribute="bottom" secondItem="2eW-5v-kqR" secondAttribute="bottom" constant="30" id="eVh-Au-dGY"/>
+                                    <constraint firstAttribute="bottom" secondItem="2eW-5v-kqR" secondAttribute="bottom" constant="31" id="eVh-Au-dGY"/>
                                     <constraint firstItem="EUz-LH-lUN" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" constant="20" id="ggE-XM-TK5"/>
                                     <constraint firstAttribute="trailing" secondItem="qMY-Ed-BhO" secondAttribute="trailing" id="grq-5S-EdY"/>
                                     <constraint firstItem="EUz-LH-lUN" firstAttribute="leading" secondItem="DeY-FK-fdF" secondAttribute="leading" constant="20" id="jEm-7Q-KIq"/>
-                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" constant="100" id="m58-W3-Ue4"/>
+                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" constant="99" id="m58-W3-Ue4"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OdF-rg-Kco">
@@ -89,7 +89,6 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3o-Ij-cIN">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="O93-f4-5Sl"/>
-                                                        <constraint firstAttribute="height" constant="50" id="jIc-f2-buo"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="mDz-b5-uLI">
