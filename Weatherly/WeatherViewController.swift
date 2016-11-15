@@ -16,11 +16,11 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var currentWeatherImage: UIImageView!
-    @IBOutlet weak var CurrentWeatherTypeLabel: UILabel!
+    @IBOutlet weak var currentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     //// Variables
-    let currentWeather = CurrentWeather()
+    var currentWeather: CurrentWeather!
     
 
     override func viewDidLoad() {
@@ -30,13 +30,15 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
+        // Update the main UI to display temperature and more details
+        currentWeather = CurrentWeather()
         currentWeather.downloadWeatherDetails {
-            // TODO: Update UI to display data
+            self.updateMainUI()
         }
     }
     
     
-    // MARK:- Table View Protocols
+    //// MARK:- Table View Protocols
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of colums to be displayed in tableView
@@ -68,6 +70,18 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         // This needs to be called in order to commit styles and allow swipeable cells
+    }
+    
+    
+    //// MARK:- Custom functions
+    
+    func updateMainUI() {
+        // This will update the Main date UI to display the weather that has been retrieved through http request
+        dateLabel.text = currentWeather.date
+        currentTempLabel.text = "\(Int(currentWeather.currentTemp))°"
+        locationLabel.text = currentWeather.cityName
+        currentWeatherTypeLabel.text = currentWeather.weatherType
+        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
     }
     
 }

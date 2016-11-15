@@ -62,7 +62,7 @@ class CurrentWeather {
     
     //// Class Functions
     
-    func downloadWeatherDetails(completed: DownloadComplete) {
+    func downloadWeatherDetails(completed: @escaping DownloadComplete) {
         
         // Alamofire download
         let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
@@ -94,13 +94,12 @@ class CurrentWeather {
                         print(Int(self._currentTemp))
                     }
                 }
-                
             }
+            
+            // Tells request that it's done
+            completed()
+            
         }
-        
-        // Tell the request that it is done
-        completed()
-        
     }
     
 }
