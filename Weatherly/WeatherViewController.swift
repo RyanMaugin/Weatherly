@@ -53,14 +53,24 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // This will return the amount of rows to be dis[;ayed in tableVoew
-        return 6
+        return forecasts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // This creates the cell and then returns it
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherCell {
+            /// This will return the correct forecast info in the cell
+            
+            let forecast = forecasts[indexPath.row]
+            cell.configureCell(forecast: forecast)
+            return cell
+            
+        } else {
+            
+            return WeatherCell()
+        }
+
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -110,6 +120,8 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
                         self.forecasts.append(forecast)
                         print(obj)
                     }
+                    self.forecasts.remove(at: 0) // Remove the first forecast because we already display current day weather
+                    self.tableView.reloadData() // Reload data in tableview
                 }
             }
             completed()
