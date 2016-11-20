@@ -8,8 +8,9 @@
 
 import UIKit
 import Alamofire
+import CoreLocation
 
-class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     
     //// Outlets
@@ -20,14 +21,25 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var currentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    //// Variables
+    //// Weather Variables
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
     
+    //// Location Variables
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation! = nil
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up location manager
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest   // Try get most accurate location
+        locationManager.requestWhenInUseAuthorization()             // Uses location manger only when app is in use
+        locationManager.startMonitoringSignificantLocationChanges() // Keeps track of significant GPS changes
         
         // Set tableView delegate and data source
         tableView.delegate = self
@@ -35,12 +47,14 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Update the main UI to display temperature and more details
         currentWeather = CurrentWeather()
-        //forecast = Forecast()
-        currentWeather.downloadWeatherDetails {
-            self.downloadForecastData {
-                self.updateMainUI()
-            }
-        }
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Before the view runs call locationAuthStatus function to set coordinate of user
+        
+        locationAuthStatus()
     }
     
     
@@ -95,7 +109,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         // This will update the Main date UI to display the weather that has been retrieved through http request
         
         dateLabel.text = currentWeather.date
-        currentTempLabel.text = "\(Int(currentWeather.currentTemp))°"
+        currentTempLabel.text = "\(Int(currentWeather.currentTemp))°C"
         locationLabel.text = currentWeather.cityName
         currentWeatherTypeLabel.text = currentWeather.weatherType
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
@@ -118,13 +132,39 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
                     for obj in list {
                         let forecast = Forecast(weatherDict: obj)
                         self.forecasts.append(forecast)
-                        print(obj)
                     }
                     self.forecasts.remove(at: 0) // Remove the first forecast because we already display current day weather
                     self.tableView.reloadData() // Reload data in tableview
                 }
             }
             completed()
+        }
+    }
+    
+    
+    func locationAuthStatus() {
+        // This will run if the location manager was authorised by user to be used
+        
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            
+            // Get users location coordinates
+            currentLocation = locationManager.location
+            Location.sharedInstace.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstace.longtitude = currentLocation.coordinate.longitude
+            
+            // Once coordinate are downloaded then update ui
+            currentWeather.downloadWeatherDetails {
+                self.downloadForecastData {
+                    self.updateMainUI()
+                }
+            }
+            
+            print(FORECAST_URL)
+            
+        } else {
+            // This will request use of location to user if it's their first time use
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
         }
     }
     
