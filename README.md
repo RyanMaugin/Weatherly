@@ -3,13 +3,13 @@ An IOS weather app which will use your location to display current weather and f
 
 # App features
 - [X] Current Forecast
-- [ ] 7 day Forecast
-- [ ] More statistical details on weatherwhen user presses cell
-- [ ] Search for weather of other cities or towns
-- [ ] See weather of a picked place on a map
+- [X] 7 day Forecast
+- [ ] More statistical details on weather when user presses cell
+- [ ] Allow user searches for weather of other cities or towns
 
 # Author
 Ryan Maugin (@techedryan)
+ryanmauginn@gmail.com
 
 # License
 
