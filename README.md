@@ -1,5 +1,5 @@
 # Weatherly
-An IOS weather app which will use your location to display current weather and forecast for next 10 days
+An IOS weather app which will use your location to display current weather and forecast for next 10 days.
 
 ![Image of Weatherly]
 (https://github.com/RyanMaugin/Weatherly/blob/master/Images/Weatherly.png)
@@ -9,6 +9,7 @@ An IOS weather app which will use your location to display current weather and f
 - [X] 7 day Forecast
 - [ ] More statistical details on weather when user presses cell
 - [ ] Allow user searches for weather of other cities or towns
+- [ ] Enable offline weather fetching
 
 # Author
 Ryan Maugin (@techedryan)
