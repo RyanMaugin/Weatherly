@@ -6,6 +6,7 @@ target 'Weatherly' do
 
   # Pods for Weatherly
   pod 'Alamofire', '~> 4.0'
+  pod 'ScrollableGraphView'
 
 end
 

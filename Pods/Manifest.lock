@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.0.1)
+  - ScrollableGraphView (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - ScrollableGraphView
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  ScrollableGraphView: 9b0ff86f9193068ffaf7e7ea875dcd297d7e8ded
 
-PODFILE CHECKSUM: 24d50af26c7989ab84475888dd814c794ca13b3e
+PODFILE CHECKSUM: 26d297aba18ece5c8580a973f8074df3b3d4a52b
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

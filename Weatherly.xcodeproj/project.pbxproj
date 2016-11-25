@@ -195,7 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94DE40991DD755FF0081B979 /* Build configuration list for PBXNativeTarget "Weatherly" */;
 			buildPhases = (
-				5F214E1403C0F6BB99F0F20F /* 📦 Check Pods Manifest.lock */,
+				5F214E1403C0F6BB99F0F20F /* [CP] Check Pods Manifest.lock */,
 				D9E731DF8406C6E1D9CAB2DC /* [CP] Check Pods Manifest.lock */,
 				94DE406D1DD755FE0081B979 /* Sources */,
 				94DE406E1DD755FE0081B979 /* Frameworks */,
@@ -357,14 +357,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weatherly/Pods-Weatherly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F214E1403C0F6BB99F0F20F /* 📦 Check Pods Manifest.lock */ = {
+		5F214E1403C0F6BB99F0F20F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

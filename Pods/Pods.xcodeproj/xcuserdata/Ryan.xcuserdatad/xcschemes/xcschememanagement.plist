@@ -6,30 +6,33 @@
 	<dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Weatherly.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>ScrollableGraphView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>064D7E87BEB388ECE6C1564098FAF5AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F94572BC1762FDD1873C1825B67F477</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C1968219D5DCC2DDC372B8901504003E</key>
+		<key>DCF3E4A38369C037B295C7A556A9C4FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
