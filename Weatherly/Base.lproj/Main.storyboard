@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-FK-fdF">
@@ -28,8 +28,11 @@
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjF-Qd-amY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjF-Qd-amY">
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="61"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -38,6 +41,9 @@
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -45,8 +51,12 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LgM-L9-fWJ">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="110" id="0V3-x3-tDc"/>
-                                                    <constraint firstAttribute="height" constant="110" id="IF2-pv-pQc"/>
+                                                    <constraint firstAttribute="width" constant="110" id="0V3-x3-tDc">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="170"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="110" id="IF2-pv-pQc">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="170"/>
+                                                    </constraint>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goq-La-zP9">
@@ -64,26 +74,32 @@
                                 <constraints>
                                     <constraint firstItem="2eW-5v-kqR" firstAttribute="leading" secondItem="EUz-LH-lUN" secondAttribute="trailing" id="5is-nZ-jpx"/>
                                     <constraint firstItem="qMY-Ed-BhO" firstAttribute="leading" secondItem="DeY-FK-fdF" secondAttribute="leading" id="8ge-Ez-UdR"/>
-                                    <constraint firstAttribute="trailing" secondItem="2eW-5v-kqR" secondAttribute="trailing" constant="22" id="Ava-aZ-guo"/>
+                                    <constraint firstAttribute="trailing" secondItem="2eW-5v-kqR" secondAttribute="trailing" constant="22" id="Ava-aZ-guo">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
                                     <constraint firstAttribute="bottom" secondItem="EUz-LH-lUN" secondAttribute="bottom" constant="20" id="FOi-HG-T0x"/>
                                     <constraint firstAttribute="height" constant="300" id="JVJ-vR-fDl"/>
                                     <constraint firstItem="qMY-Ed-BhO" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" id="NYu-6b-T2a"/>
-                                    <constraint firstAttribute="bottom" secondItem="qMY-Ed-BhO" secondAttribute="bottom" id="OKt-rO-Xui"/>
+                                    <constraint firstAttribute="bottom" secondItem="qMY-Ed-BhO" secondAttribute="bottom" constant="8" id="OKt-rO-Xui"/>
                                     <constraint firstAttribute="bottom" secondItem="2eW-5v-kqR" secondAttribute="bottom" constant="31" id="eVh-Au-dGY"/>
                                     <constraint firstItem="EUz-LH-lUN" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" constant="20" id="ggE-XM-TK5"/>
                                     <constraint firstAttribute="trailing" secondItem="qMY-Ed-BhO" secondAttribute="trailing" id="grq-5S-EdY"/>
-                                    <constraint firstItem="EUz-LH-lUN" firstAttribute="leading" secondItem="DeY-FK-fdF" secondAttribute="leading" constant="20" id="jEm-7Q-KIq"/>
-                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" constant="99" id="m58-W3-Ue4"/>
+                                    <constraint firstItem="EUz-LH-lUN" firstAttribute="leading" secondItem="DeY-FK-fdF" secondAttribute="leading" constant="20" id="jEm-7Q-KIq">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                    <constraint firstItem="2eW-5v-kqR" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="top" constant="99" id="m58-W3-Ue4">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="55"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OdF-rg-Kco">
                                 <color key="backgroundColor" red="0.92107662300000004" green="0.93091095329999995" blue="0.93141785479999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="VXU-Ww-77l" customClass="WeatherCell" customModule="Weatherly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VXU-Ww-77l" id="GoV-Mj-wjL">
-                                            <frame key="frameInset" width="320" height="79"/>
+                                            <frame key="frameInset" width="768" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3o-Ij-cIN">
@@ -155,7 +171,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="OdF-rg-Kco" secondAttribute="trailing" id="3j0-7H-P2Z"/>
                             <constraint firstItem="OdF-rg-Kco" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F3K-n1-EO5"/>
-                            <constraint firstItem="OdF-rg-Kco" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="bottom" id="WRS-hv-qdK"/>
+                            <constraint firstItem="OdF-rg-Kco" firstAttribute="top" secondItem="DeY-FK-fdF" secondAttribute="bottom" constant="-7" id="WRS-hv-qdK"/>
                             <constraint firstItem="DeY-FK-fdF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bna-5c-uPS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OdF-rg-Kco" secondAttribute="bottom" id="cfy-cg-7K3"/>
                             <constraint firstAttribute="trailing" secondItem="DeY-FK-fdF" secondAttribute="trailing" id="dph-SJ-Sdb"/>
@@ -174,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="31.25" y="36.9140625"/>
         </scene>
     </scenes>
     <resources>
