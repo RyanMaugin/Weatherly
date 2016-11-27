@@ -158,6 +158,7 @@
                                             <outlet property="lowTemp" destination="Guf-2y-EaH" id="IYb-Nf-pOT"/>
                                             <outlet property="weatherIcon" destination="J3o-Ij-cIN" id="BZv-yg-Xc8"/>
                                             <outlet property="weatherType" destination="kWa-hZ-SaS" id="DST-4j-ecD"/>
+                                            <segue destination="9Fd-15-Ky2" kind="show" identifier="dayDetailSegue" id="mXR-jx-laa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -191,6 +192,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31.25" y="36.9140625"/>
+        </scene>
+        <!--Day View Controller-->
+        <scene sceneID="VNc-46-emC">
+            <objects>
+                <viewController storyboardIdentifier="dayDetailView" id="9Fd-15-Ky2" customClass="DayViewController" customModule="Weatherly" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vfr-tV-0XO"/>
+                        <viewControllerLayoutGuide type="bottom" id="S9U-iV-deb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="64z-0O-tvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Uh-hu-yg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="36"/>
         </scene>
     </scenes>
     <resources>

@@ -10,6 +10,8 @@
 		6E0CB2D6555836DDDF6FF34C /* Pods_Weatherly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EF2300D224E0752846AA05 /* Pods_Weatherly.framework */; };
 		944DAD781DE0D79F00066EAA /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944DAD771DE0D79F00066EAA /* WeatherCell.swift */; };
 		944DAD7A1DE1D7FD00066EAA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944DAD791DE1D7FD00066EAA /* Location.swift */; };
+		945A1F441DE99FA100DE009B /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A1F431DE99FA100DE009B /* DayViewController.swift */; };
+		945A1F461DEAF4B500DE009B /* DayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A1F451DEAF4B500DE009B /* DayForecast.swift */; };
 		94DE40751DD755FE0081B979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE40741DD755FE0081B979 /* AppDelegate.swift */; };
 		94DE40771DD755FE0081B979 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE40761DD755FE0081B979 /* WeatherViewController.swift */; };
 		94DE407A1DD755FE0081B979 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DE40781DD755FE0081B979 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		36E912E7D5C539BCB87249B9 /* Pods-Weatherly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weatherly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weatherly/Pods-Weatherly.release.xcconfig"; sourceTree = "<group>"; };
 		944DAD771DE0D79F00066EAA /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		944DAD791DE1D7FD00066EAA /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		945A1F431DE99FA100DE009B /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		945A1F451DEAF4B500DE009B /* DayForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForecast.swift; sourceTree = "<group>"; };
 		94DE40711DD755FE0081B979 /* Weatherly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weatherly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DE40741DD755FE0081B979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DE40761DD755FE0081B979 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			children = (
 				94DE40761DD755FE0081B979 /* WeatherViewController.swift */,
 				94DE40C31DDA66010081B979 /* Constants.swift */,
+				945A1F431DE99FA100DE009B /* DayViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				94DE40C51DDA69500081B979 /* CurrentWeather.swift */,
 				94DE40C71DDA92680081B979 /* Forecast.swift */,
 				944DAD791DE1D7FD00066EAA /* Location.swift */,
+				945A1F451DEAF4B500DE009B /* DayForecast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -429,8 +435,10 @@
 				944DAD781DE0D79F00066EAA /* WeatherCell.swift in Sources */,
 				94DE40C61DDA69500081B979 /* CurrentWeather.swift in Sources */,
 				94DE40C41DDA66010081B979 /* Constants.swift in Sources */,
+				945A1F461DEAF4B500DE009B /* DayForecast.swift in Sources */,
 				94DE40C81DDA92680081B979 /* Forecast.swift in Sources */,
 				944DAD7A1DE1D7FD00066EAA /* Location.swift in Sources */,
+				945A1F441DE99FA100DE009B /* DayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

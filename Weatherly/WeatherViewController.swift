@@ -58,6 +58,17 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // This will be called when the view segues to another and pass data to it
+        
+        if let destination = segue.destination as? DayViewController {
+            if let data = sender as? String {
+                destination.testString = data
+            }
+        }
+    }
+    
+    
     //// MARK:- Table View Protocols
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,7 +102,9 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         // This will create buttons for when the cell is swiped and reveals them to be pressed
         
         let info = UITableViewRowAction(style: .normal, title: "  Info  ", handler: { action, index in
-            print("Info was pressed!")
+            // Transition to day detail view
+            
+            self.performSegue(withIdentifier: "dayDetailSegue", sender: "\(indexPath.row)")
         })
         info.backgroundColor = UIColor.red
         
