@@ -9,10 +9,11 @@
 import UIKit
 import ScrollableGraphView
 
-class DayViewController: UIViewController {
+class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    /// Variables
+    /// Variables & IBOutlets
     var dayForecast: DayForecast!
+    @IBOutlet weak var tableView: UITableView!
     
     /// Passed data from WeatherViewController
     private var _passedDayIndex: Int!
@@ -28,18 +29,50 @@ class DayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // This will run when the view is loaded and will 
         dayForecast = DayForecast(dayIndex: _passedDayIndex)
+        
+        // Add tableView delegate and datasource
+        tableView.dataSource = self
+        tableView.delegate =   self
         
         // Graph view test
         graphView?.lineStyle = ScrollableGraphViewLineStyle.smooth
         graphView?.set(data: graphData, withLabels: graphLabels)
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // This will run before view did load and initilise the view
         dayForecast.downloadDayWeatherDetail {}
     }
+    
+    
+    /// MARK:- TableView Protocols
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // This just tell the table view that one clums is needed
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // This function simply displays a specific amount of rows
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // This will set up the cells which are viewable with the correct info and unload them when the can't be seen
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
+        return cell
+    }
 
 }
+
+
+
+
+
+
