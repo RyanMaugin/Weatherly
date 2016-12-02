@@ -14,6 +14,8 @@ An IOS weather app which will use your location to display current weather and f
 - [ ] More statistical details on weather when user presses cell
 - [ ] Allow user searches for weather of other cities or towns
 - [ ] Enable offline weather fetching
+- [ ] Make day View background color match time of day
+- [ ] Push Notifications of the days weather every morning
 
 # Author
 Ryan Maugin (@techedryan)
