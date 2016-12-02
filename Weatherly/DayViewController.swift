@@ -11,14 +11,14 @@ import ScrollableGraphView
 
 class DayViewController: UIViewController {
     
-    /// Passed data from WeatherViewController
-    private var _passedDayIndex: String!
-    var passedDayIndex: String {
-        get { return _passedDayIndex } set { _passedDayIndex = newValue }
-    }
-    
     /// Variables
     var dayForecast: DayForecast!
+    
+    /// Passed data from WeatherViewController
+    private var _passedDayIndex: Int!
+    var passedDayIndex: Int {
+        get { return _passedDayIndex } set { _passedDayIndex = newValue }
+    }
     
     /// Graph View Variables
     @IBOutlet weak var graphView: ScrollableGraphView?
@@ -29,7 +29,7 @@ class DayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // This will run when the view is loaded and will 
-        dayForecast = DayForecast(dayIndex: Int(_passedDayIndex)!)
+        dayForecast = DayForecast(dayIndex: _passedDayIndex)
         
         // Graph view test
         graphView?.lineStyle = ScrollableGraphViewLineStyle.smooth

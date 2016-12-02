@@ -62,7 +62,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         // This will be called when the view segues to another and pass data to it
         
         if let destination = segue.destination as? DayViewController {
-            if let data = sender as? String {
+            if let data = sender as? Int {
                 destination.passedDayIndex = data
             }
         }
@@ -104,7 +104,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         let info = UITableViewRowAction(style: .normal, title: "  Info  ", handler: { action, index in
             // Transition to day detail view
             
-            self.performSegue(withIdentifier: "dayDetailSegue", sender: "\(indexPath.row)")
+            self.performSegue(withIdentifier: "dayDetailSegue", sender: indexPath.row)
         })
         info.backgroundColor = UIColor.red
         
