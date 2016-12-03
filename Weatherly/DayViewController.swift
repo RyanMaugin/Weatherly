@@ -14,6 +14,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     /// Variables & IBOutlets
     var dayForecast: DayForecast!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backButton: UIImageView!
     
     /// Passed data from WeatherViewController
     private var _passedDayIndex: Int!
@@ -37,6 +38,10 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         tableView.delegate =   self
         
+        // Add tap gesture to back button
+        let backTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DayViewController.goBack))
+        backButton.addGestureRecognizer(backTap)
+        
         // Graph view test
         graphView?.lineStyle = ScrollableGraphViewLineStyle.smooth
         graphView?.set(data: graphData, withLabels: graphLabels)
@@ -48,7 +53,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // This will run before view did load and initilise the view
         dayForecast.downloadDayWeatherDetail {}
     }
-    
+
     
     /// MARK:- TableView Protocols
     
@@ -67,6 +72,13 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
         return cell
+    }
+    
+    
+    /// MARK:- Custom functions
+    
+    func goBack() {
+        dismiss(animated: true, completion: nil)
     }
 
 }
