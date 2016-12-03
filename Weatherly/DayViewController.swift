@@ -23,8 +23,8 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     /// Graph View Variables
     @IBOutlet weak var graphView: ScrollableGraphView?
-    var graphLabels: [String] = ["ONE", "TWO", "THREE", "FOUR"]
-    var graphData: [Double] = [10.0, 8.0, 24.0, 36.0]
+    var graphLabels: [String] = ["MORNING", "EVENING", "NIGHT"]
+    var graphData: [Double] = [10.0, 8.0, 24.0]
     
 
     override func viewDidLoad() {
