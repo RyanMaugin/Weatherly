@@ -25,6 +25,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
+    var alreadyFetchedWeather = false
     
     //// Location Variables
     let locationManager = CLLocationManager()
@@ -54,7 +55,12 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidAppear(animated)
         // Before the view runs call locationAuthStatus function to set coordinate of user
         
-        locationAuthStatus()
+        if alreadyFetchedWeather == false {
+            locationAuthStatus()
+            alreadyFetchedWeather = true
+        } else {
+            // Do nothing sinch data is already loaded
+        }
     }
     
     
