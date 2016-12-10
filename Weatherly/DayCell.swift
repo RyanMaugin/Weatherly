@@ -1,5 +1,5 @@
 //
-//  DayCell.swift
+//  HumidityCell.swift
 //  Weatherly
 //
 //  Created by Ryan Maugin on 02/12/2016.

@@ -92,21 +92,21 @@ class DayForecast {
     
     var pressure: String {
         if _pressure == nil {
-            _pressure = "Unavailable"
+            _pressure = "No"
         }
         return _pressure
     }
     
     var humidity: String {
         if _humidity == nil {
-            _humidity = "Unavailable"
+            _humidity = "No"
         }
         return _humidity
     }
     
     var clouds: String {
         if _clouds == nil {
-            _clouds = "Unavailable"
+            _clouds = "No"
         }
         return _clouds
     }
@@ -138,7 +138,7 @@ class DayForecast {
                         /// Get Pressure
                         if let Pressure = listIndex["pressure"] as? Int {
                             self._pressure = "\(Pressure)"
-                            print(Pressure)
+                            print("------", self._pressure)
                         }
                         
                         /// Get Humidity

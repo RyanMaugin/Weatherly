@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VXU-Ww-77l" id="GoV-Mj-wjL">
-                                            <frame key="frameInset" width="375" height="79.5"/>
+                                            <frame key="frameInset" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3o-Ij-cIN">
@@ -275,7 +275,7 @@
                                 <color key="backgroundColor" red="0.15882999010000001" green="0.15882999010000001" blue="0.15882999010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.80931904840848801" green="0.16402410690796787" blue="0.20611726789204438" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dayCell" rowHeight="68" id="zrL-Ag-E0K" customClass="DayCell" customModule="Weatherly" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="68" id="zrL-Ag-E0K" customClass="DayCell" customModule="Weatherly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="359" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zrL-Ag-E0K" id="3Rw-A0-cpa">
@@ -295,7 +295,7 @@
                                                         <constraint firstAttribute="height" constant="10" id="9U1-h7-zda"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HUMIDITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4o-YB-l7b">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLOUDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4o-YB-l7b">
                                                     <frame key="frameInset" minX="16" minY="17" width="169" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
@@ -311,8 +311,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80931904840848801" green="0.16402410690796787" blue="0.20611726789204438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="keyLabel" destination="M4o-YB-l7b" id="yjW-Xd-WiG"/>
-                                            <outlet property="valueLabel" destination="0vy-WW-q8t" id="LRv-QM-UzO"/>
+                                            <outlet property="keyLabel" destination="M4o-YB-l7b" id="OLC-fz-PLa"/>
+                                            <outlet property="valueLabel" destination="0vy-WW-q8t" id="HdX-vr-Zxd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -408,8 +408,8 @@
                                             <accessibilityTraits key="traits" button="YES" image="YES"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="0f5-1N-zox"/>
-                                            <constraint firstAttribute="width" constant="25" id="I2v-5L-Cd7"/>
+                                            <constraint firstAttribute="height" constant="20" id="0f5-1N-zox"/>
+                                            <constraint firstAttribute="width" constant="20" id="I2v-5L-Cd7"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -448,7 +448,7 @@
                             <constraint firstAttribute="trailing" secondItem="JxH-1V-c7k" secondAttribute="trailing" id="vUN-nA-p9z"/>
                         </constraints>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="backButton" destination="7oz-Wv-ozo" id="0AF-II-gpS"/>
                         <outlet property="graphView" destination="JxH-1V-c7k" id="8Cs-gq-BGm"/>
