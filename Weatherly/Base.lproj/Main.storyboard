@@ -352,7 +352,7 @@
                                                         <color key="textColor" red="0.95764529519999997" green="0.96875475639999997" blue="0.97368202920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azE-j9-g11">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azE-j9-g11">
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                         <color key="textColor" red="0.95764529519999997" green="0.96875475639999997" blue="0.97368202920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -383,7 +383,7 @@
                                                         <color key="textColor" red="0.95764529519999997" green="0.96875475639999997" blue="0.97368202920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTp-dw-BrP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTp-dw-BrP">
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                         <color key="textColor" red="0.95764529519999997" green="0.96875475639999997" blue="0.97368202920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -451,7 +451,11 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="backButton" destination="7oz-Wv-ozo" id="0AF-II-gpS"/>
+                        <outlet property="currentTempLabel" destination="X1p-gG-Nk5" id="PA4-fL-JBZ"/>
+                        <outlet property="dateLabel" destination="r0K-bb-0a9" id="QLh-OS-xbu"/>
                         <outlet property="graphView" destination="JxH-1V-c7k" id="8Cs-gq-BGm"/>
+                        <outlet property="maxTempLabel" destination="o7c-Fi-dRE" id="dHm-y1-sVA"/>
+                        <outlet property="minTempLabel" destination="Sc9-YX-VMv" id="Ycs-ih-Lew"/>
                         <outlet property="tableView" destination="kt0-Mn-uP7" id="RxV-Yh-4wO"/>
                     </connections>
                 </viewController>

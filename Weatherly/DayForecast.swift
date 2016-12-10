@@ -16,6 +16,7 @@ class DayForecast {
     var _weather: String!
     var _weatherDescription: String!
     var _date: String!
+    var _currentTemp: String!
     var _minTemp: String!
     var _maxTemp: String!
     var _morningTemp: Int!
@@ -53,6 +54,13 @@ class DayForecast {
             _date = "Date Unavailable"
         }
         return _date
+    }
+    
+    var currentTemp: String {
+        if _currentTemp == nil {
+            _currentTemp = "0"
+        }
+        return _currentTemp
     }
     
     var minTemp: String {
@@ -131,7 +139,15 @@ class DayForecast {
                         
                         /// Get Date
                         if let Date = listIndex["dt"] as? Int {
-                            self._date = "\(Date)"
+                            
+                            // Create a date from 1970 time interval
+                            let fromUnixDate = NSDate(timeIntervalSince1970: TimeInterval(Date))
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateStyle = .short
+                            dateFormatter.timeStyle = .none
+                            let currentDate = dateFormatter.string(from: fromUnixDate as Date)
+                            
+                            self._date = "\(currentDate)"
                             print(Date)
                         }
                         
@@ -156,15 +172,23 @@ class DayForecast {
                         /// Temperature dictionary
                         if let temp = listIndex["temp"] as? Dictionary<String, AnyObject> {
                             
+                            /// Get current temperature
+                            if let CurrentTemp = temp["day"] as? Int {
+                                let celsius = CurrentTemp - 273
+                                self._currentTemp = "\(celsius)°C"
+                            }
+                            
                             /// Max Temperature
                             if let max = temp["max"] as? Int {
-                                self._maxTemp = "\(max)"
+                                let celsius = max - 273
+                                self._maxTemp = "\(celsius)°C"
                                 print(max)
                             }
                             
                             /// Min Temperature
                             if let min = temp["min"] as? Int {
-                                self._minTemp = "\(min)"
+                                let celsius = min - 273
+                                self._minTemp = "\(celsius)°C"
                                 print(min)
                             }
                             

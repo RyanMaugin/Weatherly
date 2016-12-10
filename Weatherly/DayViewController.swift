@@ -14,6 +14,12 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     /// Variables & IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backButton: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var currentTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
+    @IBOutlet weak var maxTempLabel: UILabel!
+    
+    // Cell Data
     var cellIdentifier: [String] = ["CLOUDS", "PRESSURE", "HUMIDITY"]
     var cellValue: [String]!
     
@@ -50,6 +56,15 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         graphView?.lineStyle = ScrollableGraphViewLineStyle.smooth
         graphView?.set(data: graphData, withLabels: graphLabels)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // This will run before the view is loaded or displayed
+        
+        dayForecast.downloadDayWeatherDetail {
+            self.updateUI()
+        }
+    }
 
     
     /// MARK:- TableView Protocols
@@ -85,7 +100,17 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     /// MARK:- Custom functions
     
     func goBack() {
+        // This will dismiss current view and go back to last view
         dismiss(animated: true, completion: nil)
+    }
+    
+    func updateUI() {
+        // This will update the UI with the correct weather details retrieved from weather api
+        
+        dateLabel.text = dayForecast.date
+        currentTempLabel.text = dayForecast.currentTemp
+        minTempLabel.text = dayForecast.minTemp
+        maxTempLabel.text = dayForecast.maxTemp
     }
 
 }

@@ -69,7 +69,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if let destination = segue.destination as? DayViewController {
             if let data = sender as? Int {
-                destination.passedDayIndex = data
+                destination.passedDayIndex = data + 1
             }
         }
     }
