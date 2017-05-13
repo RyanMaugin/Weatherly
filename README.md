@@ -1,8 +1,7 @@
 # Weatherly
 An IOS weather app which will use your location to display current weather and forecast for next 10 days.
 
-![Image of Weatherly]
-(https://github.com/RyanMaugin/Weatherly/blob/master/Images/Weatherly.png)
+![Image of Weatherly](https://github.com/RyanMaugin/Weatherly/blob/master/Images/Weatherly.png)
 
 # Branches
 - `master` latest stable version of weatherly
